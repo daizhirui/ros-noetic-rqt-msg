@@ -7,7 +7,7 @@ pkgname='ros-noetic-rqt-msg'
 pkgver='0.4.10'
 _pkgver_patch=0
 arch=('any')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(
@@ -36,9 +36,10 @@ depends=(
 	python-rospkg
 )
 
-_dir="rqt_msg-${pkgver}/"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_msg/archive/${pkgver}.tar.gz")
-sha256sums=('77c1faf7969cbbe5b052e1cc04a95af2c102d899470ab3827e1f90974a1a1765')
+_commit="cd226dd2b06b83c101e9e781aafa91b434ba1b29"
+_dir="rqt_msg-${_commit}/"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_msg/archive/${_commit}.tar.gz")
+sha256sums=('17f0969830b5bcfafbd333b9fb1768a3769dde4429dd7a34c4ea7bb1f4fee3bb')
 
 build() {
 	# Use ROS environment variables.
